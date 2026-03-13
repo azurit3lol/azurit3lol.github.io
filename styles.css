@@ -1,28 +1,134 @@
-:root {
-    --g: 1;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Fix the features text alignment */
-.features-text {
-    text-align: left;
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 10px;
+body {
+    background: #ffffff;
+    font-family: 'Yantramanav', sans-serif;
+    display: flex;
+    justify-content: center;
 }
 
-.feature-list {
-    margin-top: 20px;
-    padding-left: 20px;
+.main-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
 }
 
-.innerShape svg {
-    display: none; 
-}
-
+/* CD Image */
 .hero {
-    max-width: 100%;
+    width: 100%;
+    max-width: 800px;
     height: auto;
-    filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.1));
+    margin-bottom: 20px;
+}
+
+.site-title {
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Navbar Shapes */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    width: 130px;
+    height: 55px;
+    background-image: url("https://files.strawcdn.com/straw/TSIVdGRJYHbTKFYiFXQG.png"); /* Grey */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+    transition: transform 0.2s;
+}
+
+.nav-btn.active {
+    background-image: url("https://files.strawcdn.com/straw/BVlqgCZFdsxtKGdkPqpp.png"); /* Pink */
+}
+
+.nav-btn:hover {
+    transform: scale(1.1); /* Text/Box Scale */
+}
+
+/* Text Scales & Colors */
+.info-container {
+    margin-top: 40px;
+    max-width: 800px;
+}
+
+.scale-large {
+    font-size: 1.5rem; /* Equivalent to your 1.5 scale */
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.scale-medium {
+    font-size: 1.2rem; /* Equivalent to your 1.2 scale */
+    margin-bottom: 25px;
+}
+
+.must-red {
+    color: rgb(168, 43, 34); /* Red from your code */
+    font-weight: 900;
+}
+
+.fairuse-pink {
+    color: rgb(222, 194, 200);
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+.features-list {
+    text-align: left;
+    display: inline-block;
+    font-size: 1.15rem; 
+    margin-top: 20px;
+}
+
+.features-list li {
+    margin-bottom: 8px;
+}
+
+.alert-text {
+    margin-top: 50px;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #000;
+}
+
+.donate-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 150px;
+    height: 65px;
+    background-image: url("https://files.strawcdn.com/straw/IWZFmfxLplPNnrbNUvOO.png");
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+}
+
+@media (max-width: 768px) {
+    .nav-btn { width: 100px; height: 45px; font-size: 0.8rem; }
 }
