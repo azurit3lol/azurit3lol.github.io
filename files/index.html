@@ -184,5 +184,31 @@ A platform for audio downloads! Explore hundreds of files uploaded by our commun
 
 </div>
 
+  <script>
+
+fetch("files.json")
+.then(res => res.json())
+.then(files => {
+
+const table = document.getElementById("fileTable");
+
+files.forEach(file => {
+
+let row = document.createElement("tr");
+
+row.innerHTML = `
+<td><a href="${file.name}">${file.name}</a></td>
+<td>${file.size}</td>
+<td>${file.date}</td>
+`;
+
+table.appendChild(row);
+
+});
+
+});
+
+</script>
+
 </body>
 </html>
